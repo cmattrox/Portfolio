@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const CarouselItem = ({
   title,
@@ -19,7 +19,7 @@ const CarouselItem = ({
       id={idx}
     >
       <div className="lg:flex m-4 pb-5 border-b-2 border-gray-darkest">
-        <img src={image} className="h-30 md:h-60 rounded" />
+        <img src={image} alt={title} className="h-30 md:h-60 rounded" />
         <div className="pl-4">
           <h1 className="font-semibold text-4xl">{title}</h1>
           <p className="text-xl">{text}</p>

@@ -117,13 +117,17 @@ function ContactBody() {
                 className="cursor-pointer"
                 href="https://www.linkedin.com/in/welchcharles1/"
               >
-                <img className="h-10 w-12" src={LinkedIn}></img>
+                <img
+                  className="h-10 w-12"
+                  src={LinkedIn}
+                  alt="LinkedIn Link"
+                ></img>
               </a>
               <a
                 className="cursor-pointer pl-5"
                 href="https://github.com/cmattrox"
               >
-                <img className="h-10 w-10" src={Github}></img>
+                <img className="h-10 w-10" src={Github} alt="Github Link"></img>
               </a>
             </div>
           </div>

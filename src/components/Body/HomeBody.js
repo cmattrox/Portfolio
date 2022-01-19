@@ -1,5 +1,4 @@
 import '../../App.css'
-import Nelson from '../../images/IMG_2260.JPG'
 import { homeInfo } from '../../data/data'
 
 const HomeBody = () => {
@@ -17,7 +16,7 @@ const HomeBody = () => {
             <div className="md:pl-16 pt-10 md:flex">
               <img
                 src={item.img}
-                alt="Picture at the Nelson"
+                alt="Tshe Nelson"
                 className="h-30 md:h-60 rounded-full"
               ></img>
               <p className="px-5 text-2xl leading-loose text-gray-darkest">
