@@ -8,7 +8,7 @@ export const homeInfo = [
     img: Nelson,
     header: 'Hello, World!',
     paragraph:
-      "I am a young, full-stack developer with experience in assimbly language programming and object oreiented design. I'm currently in my final semester as a computer science major and have studied a broad spectrum of information systems, emphasizing in data structures and algorithm analysis for front and back end programming.",
+      "I am a young, full-stack developer with experience in assembly language programming and object oriented design. I'm currently in my final semester as a computer science major and have studied a broad spectrum of information systems, with an emphasis on data structures and algorithm analysis for front and back end development.",
     skillsTitle: 'Certified skills: ',
     skills: [
       {

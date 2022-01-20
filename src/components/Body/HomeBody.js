@@ -9,7 +9,7 @@ const HomeBody = () => {
           className="bg-gray-darker relative w-full h-full pt-5 md:pb-5 flex justify-center"
           id="body"
         >
-          <div className="bg-gray-lightest w-4/5 h-max pt-5 md:pb-10 rounded">
+          <div className="bg-gray-lightest w-4/5 h-full pt-5 md:pb-10 rounded">
             <h1 className="text-gray-darkest text-center text-7xl">
               {item.header}
             </h1>
