@@ -2,6 +2,7 @@ import Nelson from '../images/IMG_2260.JPG'
 import Portfolio from '../images/Portfolio.png'
 import Sports from '../images/Sports-Social-Media.png'
 import Lawn from '../images/4th-and-lawn.png'
+import FeedbackUI from '../images/FeedbackUI.png'
 
 export const homeInfo = [
   {
@@ -215,6 +216,36 @@ export const projectInfo = [
       },
       {
         title: 'Mocha',
+      },
+    ],
+  },
+  {
+    title: 'Feedback UI',
+    img: FeedbackUI,
+    link: 'https://github.com/cmattrox/feedback-application',
+    text:
+      'This is an application from udemy course React Front to Back 2022. It is a simple application that allows you to leave feedback on a service, with a ranking and review. The app gives a total number of reviews and an average rating as well as shows all past reviews. The user can also edit and delete past reviews on top of adding new reviews. I did add a few changes of my own from the course. I implemented tailwindcss and daisyui to consolidate styling and changed a bunch of the stylings myself.',
+    technologies: [
+      {
+        title: 'ReactJS',
+      },
+      {
+        title: 'TailwindCSS',
+      },
+      {
+        title: 'DaisyUI',
+      },
+      {
+        title: 'JSON Server',
+      },
+      {
+        title: 'Concurrently',
+      },
+      {
+        title: 'PostCSS',
+      },
+      {
+        title: 'Autoprefixer',
       },
     ],
   },
