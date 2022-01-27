@@ -29,11 +29,8 @@ function ContactBody() {
   return (
     <main>
       {contactInfo.map((item, idx) => (
-        <div
-          className="bg-gray-darker relative w-full h-full md:h-screen pt-5 flex justify-center pb-5"
-          id="body"
-        >
-          <div className="bg-gray-lightest w-4/5 h-full py-5 rounded">
+        <div className="bg-gray-darker pt-5 flex justify-center pb-5" id="body">
+          <div className="bg-gray-lightest w-4/5 py-5 rounded">
             <h1 className="text-gray-darkest text-center text-7xl">
               {item.header}
             </h1>

@@ -4,11 +4,8 @@ import { experienceInfo } from '../../data/data'
 function ExperienceBody() {
   return (
     <main>
-      <div
-        className="bg-gray-darker relative w-full h-full overflow-hidden pt-5 pb-5 flex justify-center"
-        id="body"
-      >
-        <div className="bg-gray-lightest w-4/5 h-full pt-5 pb-10  rounded">
+      <div className="bg-gray-darker  pt-5 pb-5 flex justify-center" id="body">
+        <div className="bg-gray-lightest w-4/5 pt-5 pb-10  rounded">
           <h1 className="text-gray-darkest text-center text-6xl md:text-7xl text-gray-darkest">
             {experienceInfo[0].header}
           </h1>
