@@ -2,6 +2,19 @@
 @taiwind components;
 @tailwind utilities;
 
+@layer base {
+  html,
+  body {
+    @apply w-full h-full bg-gray-darker;
+  }
+}
+
+@layer components {
+  #root {
+    @apply h-full w-full bg-gray-darker;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
