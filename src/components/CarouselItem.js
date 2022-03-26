@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const CarouselItem = ({
   title,
@@ -13,8 +13,8 @@ const CarouselItem = ({
     <div
       className={
         activeIndex !== idx
-          ? 'hidden'
-          : 'bg-gray-light text-gray-darkest mx-2 border-4 border-gray-darkest rounded'
+          ? "hidden"
+          : "fadeIn bg-gray-light text-gray-darkest mx-2 border-4 border-gray-darkest rounded bg-gray-lightest shadow-xl"
       }
       id={idx}
     >
@@ -30,7 +30,7 @@ const CarouselItem = ({
           <div className="font-semibold"> Technologies Used:</div>
           <br />
           {technologies.map(({ title }, idx) => (
-            <div id={idx} className="float-left">
+            <div key={idx} className="float-left">
               <li className="px-12">{title}</li>
             </div>
           ))}
@@ -43,7 +43,7 @@ const CarouselItem = ({
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CarouselItem
+export default CarouselItem;

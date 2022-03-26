@@ -1,18 +1,21 @@
-import '../../App.css'
-import { experienceInfo } from '../../data/data'
+import "../../App.css";
+import { experienceInfo } from "../../data/data";
 
 function ExperienceBody() {
   return (
     <main>
-      <div className="bg-gray-darker  pt-5 pb-5 flex justify-center" id="body">
-        <div className="bg-gray-lightest w-4/5 pt-5 pb-10  rounded">
-          <h1 className="text-gray-darkest text-center text-6xl md:text-7xl text-gray-darkest">
+      <div
+        className="bg-gray-darker  pt-5 pb-5 flex justify-center z-0"
+        id="body"
+      >
+        <div className="bg-gray-lightest w-4/5 pt-5 pb-10  rounded z-20 border-4 border-gray-darkest">
+          <h1 className="text-gray-darkest text-center text-6xl md:text-7xl">
             {experienceInfo[0].header}
           </h1>
           {experienceInfo[0].experience.map(
             ({ title, time, description }, idx) => (
               <div
-                id="idx"
+                key={idx}
                 className="py-10 border-gray-darkest border-b-2 m-2"
               >
                 <div className="md:grid md:grid-cols-2 px-5">
@@ -27,12 +30,12 @@ function ExperienceBody() {
                   {description}
                 </p>
               </div>
-            ),
+            )
           )}
         </div>
       </div>
     </main>
-  )
+  );
 }
 
-export default ExperienceBody
+export default ExperienceBody;
