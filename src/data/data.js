@@ -268,7 +268,7 @@ export const experienceInfo = [
         title: "International Academy of Science (Full-Stack Developer):",
         time: "September 2021 - Current",
         description:
-          "The International Academy of Science is an online, post-secondary, educational platform. on the web development team with five peers to collaborate and develop a clean, efficient, design for development projects in our que. I specialized in connecting front and back-end sources to generate essential data for pages while maintaining high standards of the industry. I primarily used HTML, CSS, JavaScript, React, PHP, and MySQL. Additionally, I facilitated a transition to React based coding to maintain the consistency of the company's websites while ensuring current projects are up-to-date and effective. ",
+          "The International Academy of Science is an online, post-secondary, educational platform. On the web development team with five peers to collaborate and develop a clean, efficient, design for development projects in our que. I specialized in connecting front and back-end sources to generate essential data for pages while maintaining high standards of the industry. I primarily used HTML, CSS, JavaScript, React, PHP, and MySQL. Additionally, I facilitated a transition to React based coding to maintain the consistency of the company's websites while ensuring current projects are up-to-date and effective. ",
       },
       {
         title:
