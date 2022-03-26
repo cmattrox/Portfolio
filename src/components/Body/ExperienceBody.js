@@ -8,7 +8,7 @@ function ExperienceBody() {
         className="bg-gray-darker  pt-5 pb-5 flex justify-center z-0"
         id="body"
       >
-        <div className="bg-gray-lightest w-4/5 pt-5 pb-10  rounded z-20 border-4 border-gray-darkest">
+        <div className="bg-gray-lightest w-4/5 pt-5 pb-10  rounded z-10 border-4 border-gray-darkest">
           <h1 className="text-gray-darkest text-center text-6xl md:text-7xl">
             {experienceInfo[0].header}
           </h1>

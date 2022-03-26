@@ -1,157 +1,141 @@
-import emailjs, { init } from 'emailjs-com';
-import React, { useRef } from 'react';
-import apiKey from '../../emailkey';
-import LinkedIn from '../../images/LI-In-Bug.png';
-import Github from '../../images/GitHub-Mark-120px-plus.png';
-import $ from 'jquery';
-import '../../App.css';
-import { contactInfo } from '../../data/data';
+import emailjs, { init } from "emailjs-com";
+import React, { useRef } from "react";
+import apiKey from "../../emailkey";
+import LinkedIn from "../../images/LI-In-Bug.png";
+import Github from "../../images/GitHub-Mark-120px-plus.png";
+import $ from "jquery";
+import "../../App.css";
+import { contactInfo } from "../../data/data";
 init(apiKey.USER_ID);
 
 function ContactBody() {
-	const form = useRef();
-	const sendEmail = (e) => {
-		e.preventDefault();
-		emailjs
-			.sendForm(
-				apiKey.SERVICE_ID,
-				apiKey.TEMPLATE_ID,
-				form.current,
-				apiKey.USER_ID
-			)
-			.then((res, err) => {
-				let frm = $('#contact-emailjs')[0];
-				frm.reset();
-				console.log(err ? err.text : res.text);
-			});
-	};
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        apiKey.SERVICE_ID,
+        apiKey.TEMPLATE_ID,
+        form.current,
+        apiKey.USER_ID
+      )
+      .then((res, err) => {
+        let frm = $("#contact-emailjs")[0];
+        frm.reset();
+        console.log(err ? err.text : res.text);
+      });
+  };
 
-	return (
-		<main>
-			{contactInfo.map((item, idx) => (
-				<div
-					className="bg-gray-darker pt-5 flex justify-center pb-5 z-0"
-					key={idx}
-					id="body"
-				>
-					<div className="bg-gray-lighter w-4/5 py-5 rounded z-20 border-4 border-gray-darkest">
-						<h1 className="text-gray-darkest text-center text-7xl">
-							{item.header}
-						</h1>
-						<div className="border-gray-darkest border-4 rounded-lg mt-10 lg:mx-20 bg-gray-lightest shadow-xl">
-							<form
-								id="contact-emailjs"
-								ref={form}
-								onSubmit={sendEmail}
-							>
-								{item.formInputs.map(
-									(
-										{
-											type,
-											name,
-											id,
-											required,
-											text,
-											placeholder,
-											pattern,
-										},
-										idx
-									) => (
-										<div key={idx}>
-											{required ? (
-												<>
-													{type === 'textarea' ? (
-														<div className="lg:grid lg:grid-cols-6 py-5 h-32 px-5">
-															<label
-																htmlFor="message"
-																className="lg:col-span-1 text-gray-darkest text-2xl lg:pl-5"
-															>
-																Message:{' '}
-															</label>
-															<textarea
-																type="text"
-																name="message"
-																id="message"
-																className="text-gray-darkest text-2xl rounded w-full lg:col-span-5 p-1"
-																required
-															></textarea>
-															<br />
-														</div>
-													) : (
-														<div className="pt-5 lg:grid lg:grid-cols-6 px-5">
-															<label
-																htmlFor={name}
-																className="lg:col-span-1 text-gray-darkest text-2xl lg:pl-5"
-															>
-																{text}
-															</label>
-															<input
-																type={type}
-																name={name}
-																id={id}
-																className="text-gray-darkest pl-1 text-2xl rounded w-full lg:col-span-5"
-																required
-															/>
-															<br />
-														</div>
-													)}
-												</>
-											) : (
-												<div className="pt-5 lg:grid lg:grid-cols-6 px-5">
-													<label
-														htmlFor={name}
-														className="lg:col-span-1 text-gray-darkest text-2xl lg:pl-5"
-													>
-														{text}
-													</label>
-													<input
-														type={type}
-														name={name}
-														id={id}
-														className="text-gray-darkest pl-1 text-2xl rounded w-full lg:col-span-5"
-													/>
-													<br />
-												</div>
-											)}
-										</div>
-									)
-								)}
-								<div className="grid justify-items-end">
-									<input
-										type="submit"
-										value="Send Email"
-										className="bg-gray-darker col-span-1 text-gray-lightest rounded p-2 m-5 cursor-pointer"
-									></input>
-								</div>
-							</form>
-						</div>
-						<div className="flex justify-center pt-5 text-gray-darkest">
-							<a
-								className="cursor-pointer"
-								href="https://www.linkedin.com/in/welchcharles1/"
-							>
-								<img
-									className="h-10 w-12"
-									src={LinkedIn}
-									alt="LinkedIn Link"
-								></img>
-							</a>
-							<a
-								className="cursor-pointer pl-5"
-								href="https://github.com/cmattrox"
-							>
-								<img
-									className="h-10 w-10"
-									src={Github}
-									alt="Github Link"
-								></img>
-							</a>
-						</div>
-					</div>
-				</div>
-			))}
-		</main>
-	);
+  return (
+    <main>
+      {contactInfo.map((item, idx) => (
+        <div
+          className="bg-gray-darker pt-5 flex justify-center pb-5 z-0"
+          key={idx}
+          id="body"
+        >
+          <div className="bg-gray-lighter w-4/5 py-5 rounded z-10 border-4 border-gray-darkest">
+            <h1 className="text-gray-darkest text-center text-7xl">
+              {item.header}
+            </h1>
+            <div className="border-gray-darkest border-4 rounded-lg mt-10 lg:mx-20 bg-gray-lightest shadow-xl">
+              <form id="contact-emailjs" ref={form} onSubmit={sendEmail}>
+                {item.formInputs.map(
+                  (
+                    { type, name, id, required, text, placeholder, pattern },
+                    idx
+                  ) => (
+                    <div key={idx}>
+                      {required ? (
+                        <>
+                          {type === "textarea" ? (
+                            <div className="lg:grid lg:grid-cols-6 py-5 h-32 px-5">
+                              <label
+                                htmlFor="message"
+                                className="lg:col-span-1 text-gray-darkest text-2xl lg:pl-5"
+                              >
+                                Message:{" "}
+                              </label>
+                              <textarea
+                                type="text"
+                                name="message"
+                                id="message"
+                                className="text-gray-darkest text-2xl rounded w-full lg:col-span-5 p-1"
+                                required
+                              ></textarea>
+                              <br />
+                            </div>
+                          ) : (
+                            <div className="pt-5 lg:grid lg:grid-cols-6 px-5">
+                              <label
+                                htmlFor={name}
+                                className="lg:col-span-1 text-gray-darkest text-2xl lg:pl-5"
+                              >
+                                {text}
+                              </label>
+                              <input
+                                type={type}
+                                name={name}
+                                id={id}
+                                className="text-gray-darkest pl-1 text-2xl rounded w-full lg:col-span-5"
+                                required
+                              />
+                              <br />
+                            </div>
+                          )}
+                        </>
+                      ) : (
+                        <div className="pt-5 lg:grid lg:grid-cols-6 px-5">
+                          <label
+                            htmlFor={name}
+                            className="lg:col-span-1 text-gray-darkest text-2xl lg:pl-5"
+                          >
+                            {text}
+                          </label>
+                          <input
+                            type={type}
+                            name={name}
+                            id={id}
+                            className="text-gray-darkest pl-1 text-2xl rounded w-full lg:col-span-5"
+                          />
+                          <br />
+                        </div>
+                      )}
+                    </div>
+                  )
+                )}
+                <div className="grid justify-items-end">
+                  <input
+                    type="submit"
+                    value="Send Email"
+                    className="bg-gray-darker col-span-1 text-gray-lightest rounded p-2 m-5 cursor-pointer"
+                  ></input>
+                </div>
+              </form>
+            </div>
+            <div className="flex justify-center pt-5 text-gray-darkest">
+              <a
+                className="cursor-pointer"
+                href="https://www.linkedin.com/in/welchcharles1/"
+              >
+                <img
+                  className="h-10 w-12"
+                  src={LinkedIn}
+                  alt="LinkedIn Link"
+                ></img>
+              </a>
+              <a
+                className="cursor-pointer pl-5"
+                href="https://github.com/cmattrox"
+              >
+                <img className="h-10 w-10" src={Github} alt="Github Link"></img>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </main>
+  );
 }
 
 export default ContactBody;

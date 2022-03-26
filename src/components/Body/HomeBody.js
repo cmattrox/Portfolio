@@ -11,7 +11,7 @@ const HomeBody = () => {
           id="body"
           key={idx}
         >
-          <div className="bg-gray-lighter w-4/5  pt-5 md:pb-10 rounded z-20 border-4 border-gray-darkest">
+          <div className="bg-gray-lighter w-4/5  pt-5 md:pb-10 rounded z-10 border-4 border-gray-darkest">
             <h1 className="text-gray-darkest text-center text-7xl">
               {item.header}
             </h1>
