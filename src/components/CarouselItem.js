@@ -5,7 +5,8 @@ const CarouselItem = ({
   text,
   technologies,
   image,
-  link,
+  github,
+  livesite,
   idx,
   activeIndex,
 }) => {
@@ -19,29 +20,40 @@ const CarouselItem = ({
       id={idx}
     >
       <div className="lg:flex m-4 pb-5 border-b-2 border-gray-darkest">
-        <img src={image} alt={title} className="h-30 md:h-60 rounded" />
+        <img
+          src={image}
+          alt={title}
+          className="h-30 md:h-60 rounded border-2 border-gray-darkest shadow-xl"
+        />
         <div className="pl-4">
           <h1 className="font-semibold text-4xl">{title}</h1>
           <p className="text-xl">{text}</p>
         </div>
       </div>
-      <div className="flex flex-col text-xl ml-4 pb-2 border-b-2 border-gray-darkest m-4">
-        <ul className="list-disc list-inside">
-          <div className="font-semibold"> Technologies Used:</div>
-          <br />
+      <div className="text-xl border-b-2 border-gray-darkest m-4 pb-4">
+        <div className="font-semibold"> Technologies Used:</div>
+        <ul className="list-disc list-inside grid grid-cols-4">
           {technologies.map(({ title }, idx) => (
-            <div key={idx} className="float-left">
-              <li className="px-12">{title}</li>
-            </div>
+            <li key={idx} className="mx-4 list-item">
+              {title}
+            </li>
           ))}
         </ul>
       </div>
       <div className="m-4 text-xl flex">
         <p className="font-semibold">Link to Github:</p>
-        <a href={link} className="underline cursor-pointer pl-2">
-          {link}
+        <a href={github} className="underline cursor-pointer pl-2">
+          {github}
         </a>
       </div>
+      {livesite && (
+        <div className="m-4 text-xl flex">
+          <p className="font-semibold">Link to live site:</p>
+          <a href={livesite} className="underline cursor-pointer pl-2">
+            {livesite}
+          </a>
+        </div>
+      )}
     </div>
   );
 };

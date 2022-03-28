@@ -37,18 +37,21 @@ const Carousel = () => {
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        {projectInfo.map(({ title, text, technologies, img, link }, idx) => (
-          <CarouselItem
-            title={title}
-            text={text}
-            technologies={technologies}
-            image={img}
-            link={link}
-            idx={idx}
-            key={idx}
-            activeIndex={activeIndex}
-          />
-        ))}
+        {projectInfo.map(
+          ({ title, text, technologies, img, github, livesite }, idx) => (
+            <CarouselItem
+              title={title}
+              text={text}
+              technologies={technologies}
+              image={img}
+              github={github}
+              livesite={livesite}
+              idx={idx}
+              key={idx}
+              activeIndex={activeIndex}
+            />
+          )
+        )}
       </div>
       <div className="pt-2 flex justify-center items-center">
         <button

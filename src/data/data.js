@@ -3,6 +3,9 @@ import Portfolio from "../images/Portfolio.png";
 import Sports from "../images/Sports-Social-Media.png";
 import Lawn from "../images/4th-and-lawn.png";
 import FeedbackUI from "../images/FeedbackUI.png";
+import GithubFinder from "../images/GithubFinder.png";
+import HouseMarketplace from "../images/HouseMarketPlace.png";
+import SupportDesk from "../images/SupportDesk.png";
 
 export const homeInfo = [
   {
@@ -103,7 +106,7 @@ export const projectInfo = [
   {
     title: "Portfolio Website:",
     img: Portfolio,
-    link: "https://github.com/cmattrox/Portfolio",
+    github: "https://github.com/cmattrox/Portfolio",
     text: "This is my portfolio website, built with React and Tailwindcss. I built this platform to introduce myself, show you what I have done, and give you a place to connect with me. Everything you see here was designed by me, even this carousel! Links under my projects will take you to the respective github pages and from there you can take a look at all of my repositories to see what I have worked on over the course of my career in development. The Contact Me page uses email.js, so if you would like to know more about any of my projects, or set up a meeting, please feel free to fill out the forum!",
     technologies: [
       {
@@ -139,9 +142,153 @@ export const projectInfo = [
     ],
   },
   {
+    title: "Github Finder",
+    img: GithubFinder,
+    github: "https://github.com/cmattrox/github-finder",
+    livesite: "https://github-finder-josqqukxv-cmattrox.vercel.app/",
+    text: "This app was from 'React Front To Back 2022' by Brad Traversy. It is a simple application, designed to look up users and their info on github. It uses the Github API to pull up a user's 10 most recent repos, as well as their following, follower, public repos and public gist counts.",
+    technologies: [
+      {
+        title: "React",
+      },
+      {
+        title: "Github API",
+      },
+      {
+        title: "Axios",
+      },
+      {
+        title: "DaisyUI",
+      },
+      {
+        title: "Micromatch",
+      },
+      {
+        title: "React-Icons",
+      },
+      {
+        title: "React Router Dom",
+      },
+      {
+        title: "Source Map URL",
+      },
+      {
+        title: "TailwindCSS",
+      },
+      {
+        title: "Autoprefixer",
+      },
+      {
+        title: "PostCSS",
+      },
+    ],
+  },
+  {
+    title: "House Marketplace",
+    img: HouseMarketplace,
+    github: "https://github.com/cmattrox/house-marketplace-app",
+    livesite: "https://house-marketplace-app-7l6drnbar-cmattrox.vercel.app",
+    text: "Here is another project from 'React Front To Back 2022' by Brad Traversy. This website is a place for users to create and view real estate listings, both for rent and for sale properties. House Marketplace includes Google Authentication API so users can create an account with their google accounts. I made some additional changes outside of what Traversy's course covered. I added a feature for logged in users to edit their email, on top of some styling and layout changes to make the site more user friendly.",
+    technologies: [
+      {
+        title: "React",
+      },
+      {
+        title: "Google OAuth API",
+      },
+      {
+        title: "Firebase",
+      },
+      {
+        title: "Leaflet",
+      },
+      {
+        title: "React Router Dom",
+      },
+      {
+        title: "Toastify",
+      },
+      {
+        title: "Swiper",
+      },
+      {
+        title: "UUID",
+      },
+      {
+        title: "TailwindCSS",
+      },
+      {
+        title: "Autoprefixer",
+      },
+      {
+        title: "PostCSS",
+      },
+    ],
+  },
+  {
+    title: "Support Desk",
+    img: SupportDesk,
+    github: "https://github.com/cmattrox/ticket-support-app",
+    livesite: "https://welchsupportdesk.herokuapp.com",
+    text: "Support Desk is another site from 'React Front To Back 2022' by Brad Traversy. This project is a favorite of mine that I've had the pleasure of working on to date. Support Desk is a full-stack project using a MERN stack. While working on this app, I found that I really enjoy the MERN stack. It includes a complete user authentication API and a way to log support tickets for Apple products. I made quite a few changes and new implementations to this project, including an edit and delete feature to your own tickets. I added some fun styling changes: hover effects, animations and interactive buttons to improve the user experience.",
+    technologies: [
+      {
+        title: "MongoDB",
+      },
+      {
+        title: "Express",
+      },
+      {
+        title: "React",
+      },
+      {
+        title: "NodeJS",
+      },
+      {
+        title: "BCryptJS",
+      },
+      {
+        title: "Concurrently",
+      },
+      {
+        title: "Express Async Handler",
+      },
+      {
+        title: "JSON Web Token",
+      },
+      {
+        title: "Mongoose",
+      },
+      {
+        title: "Nodemon",
+      },
+      {
+        title: "Axios",
+      },
+      {
+        title: "React Icons",
+      },
+      {
+        title: "React Modal",
+      },
+      {
+        title: "Redux",
+      },
+      {
+        title: "React Redux Tool Kit",
+      },
+      {
+        title: "React Router Dom",
+      },
+      {
+        title: "Toastify",
+      },
+    ],
+  },
+  {
     title: "4th-and-lawn",
     img: Lawn,
-    link: "https://github.com/cmattrox/4th-and-lawn",
+    github: "https://github.com/cmattrox/4th-and-lawn",
     text: "4th-and-Lawn is an application I developed with several of my peers that we designed for users to be able to rent out parking spaces for events and trips to ensure you have a spot once you arrive. My main role consisted of implementing external APIs, such as Google Maps, in back-end development. I even set up an automatic confirmation email to add to the user’s experience.",
     technologies: [
       {
@@ -197,7 +344,7 @@ export const projectInfo = [
   {
     title: "Sports Social Media App",
     img: Sports,
-    link: "https://github.com/cmattrox/project-2",
+    github: "https://github.com/cmattrox/project-2",
     text: "This was a group project designed to enable users to post and find times, dates, and locations for recreational pick-up games. This application has many functions, including the ability for users to create players, keep track of their games, and view other’s activities. We used Handlebars.js to build out the templates we needed, and Express.js as the backend server framework. ",
     technologies: [
       {
@@ -232,7 +379,7 @@ export const projectInfo = [
   {
     title: "Feedback UI",
     img: FeedbackUI,
-    link: "https://github.com/cmattrox/feedback-application",
+    github: "https://github.com/cmattrox/feedback-application",
     text: "This is an application from udemy course React Front to Back 2022. It is a simple application that allows you to leave feedback on a service, with a ranking and review. The app gives a total number of reviews and an average rating as well as shows all past reviews. The user can also edit and delete past reviews on top of adding new reviews. I did add a few changes of my own from the course. I implemented tailwindcss and daisyui to consolidate styling and changed a bunch of the stylings myself.",
     technologies: [
       {
